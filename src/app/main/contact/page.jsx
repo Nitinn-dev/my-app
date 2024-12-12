@@ -1,5 +1,5 @@
 "use client"
-import { Box, Card, CardContent } from '@mui/material'
+import { Card, CardContent } from '@mui/material'
 import { emailAdress } from '../../../lib/requirement'
 
 const page = () => {
