@@ -3,7 +3,7 @@ import { Button } from '@mui/material'
 import { useRouter } from 'next/navigation';
 import React, { useCallback } from 'react'
 
-const aleTypes = () => {
+const AleTypes = () => {
     const router=useRouter();
     const gotoTypes= useCallback(()=>router.replace("/main/types"));
 
@@ -31,4 +31,4 @@ const aleTypes = () => {
 
   )
 }
-export default aleTypes
+export default AleTypes

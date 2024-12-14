@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation';
 
 
-const page = () => {
+const Page = () => {
 
   const router=useRouter();
   const gotoTypes= useCallback(()=>router.replace("/main/types"));
@@ -23,4 +23,4 @@ const page = () => {
       </div> )
 }
 
-export default page
+export default Page

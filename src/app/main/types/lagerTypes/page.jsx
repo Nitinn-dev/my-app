@@ -1,14 +1,14 @@
 "use client"
-import { Box, Button } from '@mui/material';
-import { DataGrid, renderActionsCell } from '@mui/x-data-grid'
+import { Button } from '@mui/material';
+import { DataGrid } from '@mui/x-data-grid'
 import { useRouter } from 'next/navigation';
 import React, { useCallback } from 'react'
 
 
-const lagerTypes = () => {
+const LagerTypes = () => {
 
 const router=useRouter();
-const gotoTypes= useCallback(()=>router.replace("/main/types"));
+const gotoTypes= useCallback(()=>router.replace("/main/types"),[]);
 
 const columns=[
      { field: 'types', headerName:(<strong>Types</strong>), width: 200, },
@@ -45,4 +45,4 @@ const rows=[
   )
 }
 
-export default lagerTypes 
+export default LagerTypes 
