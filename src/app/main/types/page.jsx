@@ -1,5 +1,5 @@
 "use client"
-import { Accordion, AccordionActions, AccordionDetails, AccordionSummary, Button, Typography } from '@mui/material'
+import { Accordion, AccordionActions, AccordionDetails, AccordionSummary, Button, Card, CardActions, CardContent, Typography } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import React, { useCallback } from 'react'
 import { useRouter } from 'next/navigation'
@@ -14,74 +14,66 @@ const Types = () => {
   return (
     <div className='w-full h-[82vh] flex flex-col items-center justify-center '>
       <div className='mt-3 mb-2 text-3xl font-bold'>Different Types of Beer</div>
-        <div className='p-10 w-3/4 h-[75vh] items-center overflow-auto'>
-       <div className='mb-3'>
-        <Accordion className='p-3'>
-        <AccordionSummary
-          expandIcon={<ArrowDropDownIcon />}
-        >
+      <div className='h-[75vh] overflow-auto'>
+       <div className='flex flex-row items-center justify-center mt-5  '>
+        <div className='w-1/2 h-1/2 ml-10 mr-5'>
+        <Card>
+          <CardContent>
           <Typography sx={{fontWeight:"bold",fontSize:"24px"}}>Ales</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
           <Typography>      
 Ales are a diverse category of beer made through top fermentation, where yeast ferments at warmer temperatures (60–75°F or 15–24°C). This method produces complex, fruity, and aromatic flavors.
           </Typography>
-        </AccordionDetails>
-        <AccordionActions>
+          </CardContent>
+          <CardActions>
           <Button onClick={gotoaleTypes} sx={{color:"#060606",backgroundColor:"#D9E8FC",textTransform:"none"}}>Types of Ales</Button>
-        </AccordionActions>
-      </Accordion>
-      </div><div className='mb-3'>
-      <Accordion className='my-3 p-3' >
-        <AccordionSummary
-          expandIcon={<ArrowDropDownIcon />}
-        >
+          </CardActions>
+        </Card>
+        </div>
+        <div  className='w-1/2 h-1/2 ml-5 mr-10'>
+        <Card>
+          <CardContent>
           <Typography sx={{fontWeight:"bold",fontSize:"24px"}}>Lagers</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
           <Typography>
-          Lager beers are a category of beer brewed using bottom-fermenting yeast at cooler temperatures (35–50°F or 2–10°C). This fermentation process produces clean, crisp flavors with fewer fruity or spicy notes compared to ales
+          Lager beers are a category of beer brewed using bottom-fermenting yeast at cooler temperatures (35–50°F or 2–10°C). This fermentation process produces clean, crisp flavors with fewer fruity or spicy notes.
   </Typography>
-        </AccordionDetails>
-        <AccordionActions>
+          </CardContent>
+          <CardActions>
           <Button onClick={gotolagerTypes} sx={{color:"#060606",backgroundColor:"#D9E8FC",textTransform:"none"}}>Types of Lagers</Button>
-        </AccordionActions>
-      </Accordion>
-      </div><div className='mb-3'>
-      <Accordion className='my-3 p-3' >
-        <AccordionSummary
-          expandIcon={<ArrowDropDownIcon />}
-        >
+          </CardActions>
+        </Card>
+        </div>
+        </div>
+<div className='flex flex-row items-center justify-center mt-5 mb-5  '>
+<div  className='w-1/2 h-1/2 ml-10 mr-5'>
+        <Card sx={{ overflow:"auto"}}>
+          <CardContent>
           <Typography sx={{fontWeight:"bold",fontSize:"24px"}}>Hybrid Styles</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
           <Typography>
           Hybrid beers are about experimentation, using unconventional techniques to create innovative and approachable brews.
           They are highly versatile and often appeal to fans of both ales and lagers. </Typography>
-        </AccordionDetails>
-        <AccordionActions>
+          </CardContent>
+          <CardActions>
           <Button onClick={gotohybridTypes} sx={{color:"#060606",backgroundColor:"#D9E8FC",textTransform:"none"}}>Types of Hybrid Styles</Button>
-        </AccordionActions>
-      </Accordion>
-      </div><div className='mb-3'>
-      <Accordion className='my-3 p-3' >
-        <AccordionSummary
-          expandIcon={<ArrowDropDownIcon />}
-        >
+          </CardActions>
+        </Card>
+        </div>
+ <div  className='w-1/2 h-1/2 ml-5 mr-10'>
+        <Card>
+          <CardContent>
           <Typography sx={{fontWeight:"bold",fontSize:"24px"}}>Regional Styles</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
           <Typography>
-          These styles are unique to there Region.
+          
+Regional beer styles are deeply rooted in the brewing traditions and ingredients of specific areas, showcasing unique flavors and techniques developed over centuries. 
           </Typography>
-        </AccordionDetails>
-        <AccordionActions>
+          </CardContent>
+          <CardActions>
           <Button onClick={gotoregionalTypes} sx={{color:"#060606",backgroundColor:"#D9E8FC",textTransform:"none"}}>Types of Regional Styles</Button>
-        </AccordionActions>
-      </Accordion>
-      </div>
-      </div>
+          </CardActions>
+        </Card>
+        </div>
+        </div>
     </div>
+     </div>
   )
 }
 
