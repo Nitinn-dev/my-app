@@ -7,7 +7,7 @@ const Types = () => {
   const router=useRouter();
   const gotoaleTypes= useCallback(()=>router.replace("/main/types/alesTypes"));
   const gotolagerTypes= useCallback(()=>router.replace("/main/types/lagerTypes"));
-  const gotohybridTypes= useCallback(()=>router.replace("/main/types/hybriTypes"));
+  const gotohybridTypes= useCallback(()=>router.replace("/main/types/hybridTypes"));
   const gotoregionalTypes= useCallback(()=>router.replace("/main/types/regionalTypes"));
 
   return (

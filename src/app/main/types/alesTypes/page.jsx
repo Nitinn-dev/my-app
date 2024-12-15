@@ -8,8 +8,9 @@ const AleTypes = () => {
     const gotoTypes= useCallback(()=>router.replace("/main/types"));
 
   return (
-    <div className='w-full flex flex-col items-center justify-center'>
-        <div className='mt-5 mb-2'>
+    <div className='w-full h-[82vh] flex flex-col items-center justify-center'>
+      <div className='mt-3 mb-2 text-3xl font-bold'>Different Types of Ales</div>
+        <div className='mt-5 mb-2 h-[75vh] overflow-auto '>
        <div className='mt-2'> <strong>1. Pale Ales</strong> <h1> Light-colored ales with a balance between malt and hops. Often crisp and refreshing.</h1></div>
        <div className='mt-2'> <strong>2. India Pale Ale (IPA)</strong> <h1> A hoppier version of pale ale, originally brewed to survive long shipping journeys to India.</h1></div>
        <div className='mt-2'> <strong>3. Stouts</strong> <h1> Dark ales with roasted malt flavors resembling coffee or chocolate.</h1></div>

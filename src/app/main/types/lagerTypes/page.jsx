@@ -28,7 +28,8 @@ const rows=[
 ];
   return (
     <div className='w-full h-[82vh] flex flex-col items-center justify-center bg-["#D9E8FC"]'> 
-    <div className='w-2/3 h-3/4 mb-4'>
+    <div className='mt-3 mb-2 text-3xl font-bold'>Different Types of Lagers</div>
+    <div className='w-2/3 h-3/4 mb-2'>
       <DataGrid
         rows={rows}
         columns={columns}
