@@ -1,10 +1,12 @@
-"use client"
-import React, { useCallback } from 'react'
+"use client";
+import React, { useCallback, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation';
+import VisitorCounter from './VisitorCounter'; // Adjust the import path as necessary
 
 
 const Page = () => {
+  const [data, setData] = React.useState([]);
 
   const router=useRouter();
   const gotoTypes= useCallback(()=>router.replace("/main/types"));
@@ -18,6 +20,7 @@ const Page = () => {
       <div className='text-center mb-5'>
         <Button variant="outlined" onClick={gotoTypes} >Let&apos;s Know more</Button>
       </div>
+      <VisitorCounter />
       </div>   
        
       </div> )
